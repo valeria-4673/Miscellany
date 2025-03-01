@@ -39,3 +39,24 @@ suma = 0
 for valor in denominadores:
     suma += valor
 print(suma)
+
+# ORDER NUMBER WITHOUT METHODS
+x = int(input("Cuantos numeros va a ingresar: "))
+numeros = []
+for i in range (x):
+    num = int(input(f"Ingrese num {i+1}: "))
+    numeros.append(num)
+print("los originales son: ", numeros)
+
+def ordenando (numeros):
+    for i in range (len(numeros)-1):
+        if numeros [i] >= numeros [i+1]:
+            numeros [i], numeros [i+1] = numeros [i+1], numeros [i]
+
+diferencia = -1
+
+while (diferencia < 0):
+    for i in range (len(numeros)-1):
+        diferencia = numeros [i+1]-numeros [i]
+        ordenando(numeros)
+print("los ordenados son: ", numeros)
