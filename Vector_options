@@ -45,3 +45,15 @@ while (opcion != 0 and 1 <= opcion <=6 ):
          vector.sort()
          print("El maximo es: ", vector[tamaño -1])
          opcion = preguntar()
+#Other program
+
+vector = []
+answer = int(input("De cuánto el vector? "))
+for i in range (answer):
+    animal = input("Write number: ")
+    vector.append(animal)
+buscar = input("Qué busca? ")
+
+for i in range(answer):
+    if vector[i] == buscar:
+        print(f"El anterior es {vector[i-1]} y el poterior es {vector[i+1]}")
